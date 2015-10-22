@@ -1,4 +1,4 @@
-TARGET = netdialog
+TARGET = EV3_Remote
 OBJS = main.o
 
 # For OE firmware:
@@ -13,10 +13,9 @@ ASFLAGS = $(CFLAGS)
 
 LIBDIR =
 LDFLAGS =
-LIBS = -lpsputility -lpspgum -lpspgu -lm
+LIBS = -lpsputility -lpspgum -lpspgu -lm -lstdc++ -lpspgu
 
 EXTRA_TARGETS = EBOOT.PBP
-PSP_EBOOT_TITLE = Net Dialog Sample
-
+PSP_EBOOT_TITLE = EV3 Remote
 PSPSDK=$(shell psp-config --pspsdk-path)
 include $(PSPSDK)/lib/build.mak
